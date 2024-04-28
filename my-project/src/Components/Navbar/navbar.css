@@ -1,0 +1,32 @@
+.logo{
+    color: rgb(178, 216, 255);
+   
+}
+
+.literary{
+    margin-top: 26px;
+    padding-left: 10px;
+    align-items: center;
+}
+.classlink{
+    margin-right: 0px;
+}
+.navul{
+    
+    margin-left:800px;
+    display: flex;
+    margin-bottom: 10px;
+    
+
+}
+.navul li :hover{
+    background-color: rgb(13, 4, 114);
+    color: rgb(255, 255, 255);
+}
+
+.main{
+     border:solid #0b3068 ; 
+    border-radius: 5px;
+    max-height: 100px;
+
+}
