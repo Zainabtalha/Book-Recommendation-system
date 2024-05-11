@@ -1,32 +1,57 @@
-.logo{
+/* navbar.css */
+.logo {
     color: rgb(178, 216, 255);
-   
 }
 
-.literary{
+.literary {
     margin-top: 26px;
     padding-left: 10px;
     align-items: center;
 }
-.classlink{
-    margin-right: 0px;
+
+.classlink {
+    margin-right: 20px; /* Adjust margin to create space between logo and navigation links */
 }
-.navul{
-    
-    margin-left:800px;
+
+.navul {
+    margin-left: auto; /* Move navigation links to the right */
     display: flex;
     margin-bottom: 10px;
-    
-
 }
-.navul li :hover{
+
+.navul li:hover {
     background-color: rgb(13, 4, 114);
-    color: rgb(255, 255, 255);
+    color: rgb(30, 194, 203);
 }
 
-.main{
-     border:solid #0b3068 ; 
+.main {
+    border: solid #0b3068;
     border-radius: 5px;
     max-height: 100px;
+    padding-left: 20px;
+}
 
+.dropdown-menu {
+    display: none;
+}
+
+.relative:hover .dropdown-menu {
+    display: block;
+}
+
+/* Media query for responsiveness */
+@media only screen and (max-width: 768px) {
+    .navul {
+        flex-direction: column; /* Change navigation links to stack vertically */
+        align-items: flex-start; /* Align navigation links to the left */
+    }
+    
+    .navul li {
+        margin-bottom: 10px; /* Add space between navigation links */
+    }
+
+    .login-button {
+        margin-left: auto; /* Align login button to the right */
+        margin-right: 20px; /* Add space between login button and navigation links */
+    }
 }

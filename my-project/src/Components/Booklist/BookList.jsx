@@ -7,20 +7,25 @@ const BookList = ({ title, books }) => { // Accepting 'books' prop
   const [selectedBook, setSelectedBook] = useState(null);
 
   const openDescriptionModal = (book) => {
-    setSelectedBook(book);
+    // If the book has a link, open it in a new tab
+    if (book.link) {
+      window.open(book.link, '_blank');
+    } else {
+      // Otherwise, set the selected book to display its description modal
+      setSelectedBook(book);
+    }
   };
-
   const closeDescriptionModal = () => {
     setSelectedBook(null);
   };
   return (
     <>
-      <div className='section bg-gray-200 w-full'>
+      <div className='section bg-gray-200 '>
           <Navbar />
           <div className='body'>
           <div className='heading'>
             <div className='text-center mb-20'>
-              <h1 className='text-6xl align-middle font-bold font-serif text-blue-800 content-center py-3'>{title}</h1>
+              <h1 className='text-6xl align-middle font-bold font-serif text-blue-800 content-centers'>{title}</h1>
             </div>
           </div>
           <div className="search text-center mb-10" >
@@ -38,7 +43,7 @@ const BookList = ({ title, books }) => { // Accepting 'books' prop
             ).map((book, index) => (
               <div
                 key={index}
-                onClick={() => openDescriptionModal(book)}
+                 onClick={() => openDescriptionModal(book)}
                 className={`background rounded-2xl shadow-xl duration-200 max-w-[300px] group relative w-full`}
                 data-aos="fade-up"
                 data-aos-delay={book.aosDelay}

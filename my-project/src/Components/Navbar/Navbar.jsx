@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './navbar.css'; 
 import Logo from './Logo.png';
 import Services from '../Services/Services';
@@ -8,19 +9,36 @@ import Home from '../home/Home';
 // Menu data
 const Menus = [
   {
-    id: 1,
-    name: "Home",
-    link: "/"
+    label: "Home",
+    url: "/"
   },
   {
-    id: 2,
-    name: "Top-Books",
-    link: "/services"
+    label: "Popular Books",
+    url: "/pop"
   },
   {
-    id: 3,
-    name: "Reviews",
-    link: "/testominal"
+    label: "Recommendation",
+    url: "/rec"
+  },
+];
+
+// Genres data
+const genres = [
+  { 
+    label: "Adventure", 
+    url: "/adventure"
+  },
+  { 
+    label: "Horror", 
+    url: "/horror"
+  },
+  { 
+    label: "Mystery", 
+    url: "/mystery"
+  },
+  { 
+    label: "Fiction", 
+    url: "/fiction"
   },
 ];
 
@@ -32,10 +50,10 @@ const Navbar = () => {
         <div className="flex">
           {/* Logo Section */}
           <div className="flex justify-between logo"> 
-            <a href='/' className='font-bold text-2xl flex font-cursive'>
+            <Link to='/' className='font-bold text-2xl flex font-cursive'>
               <img src={Logo} alt="Logo" className=' mt-3 w-10  mb-10'/>
               <div className="literary">Literaryleague</div> 
-            </a>
+            </Link>
           </div>
           {/* Link Section */}
           <div className="classlink"></div>
@@ -43,14 +61,24 @@ const Navbar = () => {
             <ul className='hidden sm:flex items-right gap-4 navul'>
               {Menus.map((data, index) => (
                 <li key={index}>
-                  <a href={data.link} className='inline-block text-xl py-4 px-4 text-white/70 hover:text-white duration-200'> {data.name}
-                  </a>
+                  <Link to={data.url} className='inline-block text-xl py-4 px-4 text-white/70 hover:text-white duration-200'>{data.label}</Link>
                 </li>
               ))}
+              {/* Dropdown for genres */}
+              <li className="relative">
+                <span className="inline-block text-xl py-4 px-4 text-white/70 hover:text-white duration-200 cursor-pointer">Genres</span>
+                <ul className="absolute hidden bg-white text-gray-800 pt-1 shadow rounded-md dropdown-menu">
+                  {genres.map((genre, index) => (
+                    <li key={index} className="px-4 py-2 hover:bg-gray-200">
+                      <Link to={genre.url}>{genre.label}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </li>
             </ul>
-           <a href='/login'>
+           <Link to='/login'>
             <button className='text-blue-300 bg-gradient-to-r from-blue-600 to-cyan-600 border-2 border-blue-800 rounded-full px-3 py-1 text-grey-200 text-center  hover:text-white hover:scale-105 duration-200'>Login</button>
-            </a>
+            </Link>
           </div> 
         </div>
       </div>

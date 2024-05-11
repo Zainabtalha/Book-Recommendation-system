@@ -6,7 +6,6 @@ import Testimonial from '../Testominal/Testominal';
 import Navbar from '../Navbar/Navbar';
 import TypewriterText from './TypewriterText';
 import Register from '../Register/Register';
-import img1 from './img1.jpg'
 
 
 const Home = () => {

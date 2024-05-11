@@ -84,15 +84,15 @@ function Register() {
             </label>
           </div>
           {/* <button type="submit" className="login-btn ">Login</button> */}
-          <button
-            type="button"
-            className="bg-stone-200 btn btn-outline-success login-btn"
+          <a href="/login" ><button
+             type="button"
+            className="bg-stone-200 py-2 login-btn"
             onClick={() => {
               handleSignup();
             }}
           >
-            Signup
-          </button>
+            Signup 
+          </button></a>
 
           <div className="text-center mt-3">
          

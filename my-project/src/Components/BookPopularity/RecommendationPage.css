@@ -1,0 +1,71 @@
+/* RecommendationPage.css */
+.body {
+    width: 100%;
+    margin: 0;
+     padding: 10px;
+    background-color: rgb(199, 199, 199); 
+}
+
+.book-item {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 2fr)); /* Adjust column size as needed */
+    grid-gap: 20px; /* Adjust the gap between items */
+  }
+  
+.book-item img {
+    width: 100px;
+    align-items: center;
+    position:flex;
+    margin-left: 100px;
+
+}
+
+.heading {
+    margin-top: 50px;
+    align-items: center;
+    align-content: center;
+}
+
+.navbar {
+    width: 100%;
+    height: auto;
+}
+
+.head {
+    background-image: url("https://media.istockphoto.com/id/1126130554/photo/row-of-old-books-with-colorful-covers-on-pastel-blue-background-education-concept-mock-up-for.jpg?s=612x612&w=0&k=20&c=8exxJl1Q-VaAYiRpReGn0ZJ15ezWigdvea9tp_3JnIw=");
+    background-position: bottom;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .book-item {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .book-item {
+        width: 100%;
+    }
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@media (min-width: 640px) {
+    .book-item {
+      grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .book-item {
+      grid-template-columns: repeat(3, 1fr); /* Three columns for large screens */
+    }
+  }
