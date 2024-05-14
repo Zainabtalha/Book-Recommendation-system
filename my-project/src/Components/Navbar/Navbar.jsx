@@ -5,6 +5,7 @@ import Logo from './Logo.png';
 import Services from '../Services/Services';
 import Testimonial from '../Testominal/Testominal';
 import Home from '../home/Home';
+import ChatApp from '../chat/chat';
 
 // Menu data
 const Menus = [
@@ -20,7 +21,14 @@ const Menus = [
     label: "Recommendation",
     url: "/rec"
   },
+
+  {
+    label: "Chat",
+    url: "/chat"
+  },
+
 ];
+
 
 // Genres data
 const genres = [
@@ -40,7 +48,10 @@ const genres = [
     label: "Fiction", 
     url: "/fiction"
   },
+  
 ];
+
+
 
 // Navbar component
 const Navbar = () => {

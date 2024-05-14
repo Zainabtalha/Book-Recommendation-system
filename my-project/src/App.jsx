@@ -19,7 +19,7 @@ import HorrorPage from './Components/Booklist/HorrorPage';
  import Recommendation from './Components/BookPopularity/Rcoomendation';
 import RomancePage from './Components/Booklist/RomancePage';
 import MysteryPage from './Components/Booklist/MysteryPage';
-
+import ChatApp from './Components/chat/chat';
 
 
 const Dashboard = () =>{
@@ -104,7 +104,10 @@ const router = createBrowserRouter([
                 path:"/pop",
                 element:<RecommendationPage/>
                 },
-    
+                {
+                  path:"/chat",
+                  element:<ChatApp/>
+                  },
 
 
 

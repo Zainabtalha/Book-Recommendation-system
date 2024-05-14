@@ -56,7 +56,7 @@ function Login() {
           </h4>
           <div className="mb-3">
             <label htmlFor="email" className="form-label">
-              Email address
+              Username
             </label>
             <input
               type="email"
@@ -68,7 +68,7 @@ function Login() {
               onChange={(e) => setEmail(e.target.value)}
             />
             <div id="emailHelp" className="form-text">
-              We'll never share your email with anyone else.
+             
             </div>
           </div>
           <div className="mb-3">
@@ -83,6 +83,7 @@ function Login() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
+             We'll never share your password with anyone else.
           </div>
           <a href="/" ><button
              type="button"
